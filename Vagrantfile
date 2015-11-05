@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder ".", "/home/vagrant/host", :mount_options => ["dmode=777", "fmode=666"]
 
-  config.vm.provision "shell", path: "provision.sh"
+  # Run provision.sh as root from ssh console
+  # config.vm.provision "shell", path: "provision.sh"
 
 end
